@@ -2,7 +2,8 @@
 	--animate-delay: 1.2s;
 	@include media-breakpoint-up(xxl) {
 	--fontSizeBase: #{$em-base};
-	}
+}
+--fontSizeBase: 14px;
 	@include media-breakpoint-up(md) {
 
 		--sPT: #{rem(80)};
