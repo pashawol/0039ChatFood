@@ -1,0 +1,43 @@
+mixin header()
+	header.bg-white.border-bottom
+		nav.navbar.navbar-light.navbar-expand-xl.border-bottom
+			.container-fluid
+				a.navbar-brand(href='#').order-xl-first
+					img.d-inline-block.align-text-top(src='img/svg/logo.svg' alt='' width='198' height='40')
+				button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+				#navbarNav.collapse.navbar-collapse.order-xl-first
+					+b.cabinet-btn(href="#").text-body.order-xl-last.ms-auto
+						+e.img-wrap
+							img(src="img/avatar.png", alt="")
+						div  Перчини на Революционной
+							.text-secondary ID43534
+					ul.navbar-nav
+						li.nav-item
+							a.nav-link.active(aria-current='page' href='#') Заказы
+						mixin a(a)
+							li.nav-item: a.nav-link(href='#')= a
+						+a('Меню')
+						+a('Акции')
+						+a('Клиенты')
+						+a('Бонусы')
+						+a('Доставка')
+						+a('Аналитика')
+						+a('Настройки')
+						+a('Поддержка')
+		nav.navbar.navbar-light.navbar-expand-lg
+			.container-fluid
+				.navbar-brand Все заказы (55)
+				#navbarNav2.collapse.navbar-collapse
+					ul.navbar-nav.navbar-nav--color
+						li.nav-item
+							a.nav-link.active(aria-current='page' href='#') Все
+						mixin a(a, c)
+							li.nav-item: a.nav-link(href='#' style=`--color: var(${c})`)= a
+						+a('Новый','--bs-danger')
+						+a('Принят','--bs-warning')
+						+a('В пути','--bs-primary')
+						+a('Доставлен','--bs-success')
+						+a('Архив','--bs-secondary')
+				button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav2' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+					span.navbar-toggler-icon

@@ -1,0 +1,87 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	+header()
+	.main-block
+		.main-block__inner
+			.container-fluid 	
+				table(class="table   table-hover table-bordered").text-center
+					thead
+						tr
+							mixin th(t)
+								th(scope="col").bg-secondary.text-white= t
+							+th(`№`)
+							+th(`Статус`)
+							+th(`Клиент`)
+							+th(`Телефон`)
+							+th(`Дата`)
+							+th(`Адрес`)
+							+th(`Сумма итого`)
+							+th(`Сумма заказа`)
+							+th(`Сумма доставки`)
+							+th(`Сумма скидки`)
+							+th(`Доставка`)
+							+th(`Комменарий`)
+							+th(`Способ оплаты`)
+							+th(`Время доставки`)
+					tbody
+						mixin tr(data)
+							tr
+								td= data.t1
+								td
+									select.form-select
+										option Новый
+										option Принят
+										option В пути
+										option Доставлен
+										option Архив
+								td= data.t3
+								td= data.t4
+								td= data.t5
+								td= data.t6
+								td= data.t7
+								td= data.t8 
+								td= data.t9
+								td= data.t10
+								td= data.t11
+								td= data.t12
+								td= data.t13
+								td= data.t14
+						- for (var x = 0; x < 50; x++)
+							+tr({
+								t1:`21-17`,
+								t3:`Константин Конст...`,
+								t4:`+7 (917) 811-27-37`,
+								t5:`18:22, 10-06-2021`,
+								t6:`Ленина 87, кв 5`,
+								t7:`1460 р.`,
+								t8:`1330 р.`,
+								t9:`350 р.`,
+								t10:`-240 р.`,
+								t11:`Курьером`,
+								t12:`Вход напротив...`,
+								t13:`Онлайн оплата`,
+								t14: `Как можно скорее`
+							})
+
+					
+
+	//- +footer()
+      
+
+
+
