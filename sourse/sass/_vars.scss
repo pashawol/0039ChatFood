@@ -549,7 +549,7 @@ $mark-bg: #fcf8e3 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y: 1rem !default;
+$table-cell-padding-y: .5rem !default;
 $table-cell-padding-x: .8rem !default;
 $table-cell-padding-y-sm: .25rem !default;
 $table-cell-padding-x-sm: .25rem !default;
@@ -938,7 +938,7 @@ $zindex-tooltip: 1080 !default;
 // Navs
 
 // scss-docs-start nav-variables
-$nav-link-padding-y: 1.5rem !default;
+$nav-link-padding-y: 1rem !default;
 $nav-link-padding-x: 1rem !default;
 $nav-link-font-size: null !default;
 $nav-link-font-weight: null !default;

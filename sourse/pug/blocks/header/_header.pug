@@ -28,6 +28,8 @@ mixin header()
 		nav.navbar.navbar-light.navbar-expand-lg
 			.container-fluid
 				.navbar-brand Все заказы (55)
+				button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav2' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+					span.navbar-toggler-icon
 				#navbarNav2.collapse.navbar-collapse
 					ul.navbar-nav.navbar-nav--color
 						li.nav-item
@@ -39,5 +41,3 @@ mixin header()
 						+a('В пути','--bs-primary')
 						+a('Доставлен','--bs-success')
 						+a('Архив','--bs-secondary')
-				button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav2' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-					span.navbar-toggler-icon
