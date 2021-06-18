@@ -14,13 +14,13 @@ block title
 block pagecontent
 
 
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
 	.main-block
 		.main-block__inner
 			.container-fluid 	
 				table(class="table   table-hover table-bordered").text-center
-					thead.sticky-top
+					thead
 						tr
 							mixin th(t)
 								th(scope="col").bg-secondary.text-white= t
@@ -44,11 +44,11 @@ block pagecontent
 								td= data.t1
 								td
 									select.form-select
-										option Новый
-										option Принят
-										option В пути
-										option Доставлен
-										option Архив
+										option(style="color:var(--bs-danger") Новый
+										option(style="color:") Принят
+										option(style="color:") В пути
+										option(style="color:") Доставлен
+										option(style="color:") Архив
 								td= data.t3
 								td= data.t4
 								td= data.t5

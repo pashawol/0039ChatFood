@@ -1,0 +1,83 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '02 menu'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	+header('menu')
+	.main-block
+		.main-block__inner(style="--minw: 1000px")
+			.container-fluid 
+				.card.mb-4
+					.card-body.border-0.py-0
+						.row 
+							.col-lg-auto.align-self-center По разделам:
+							.col 
+								ul.nav
+									li.nav-item
+										a.nav-link.active(aria-current='page' href='#').py-4 Все (97)
+									mixin a(a, c)
+										li.nav-item: a.nav-link(href='#').py-4= a
+									+a('Суши (5)','--bs-danger')
+									+a('Сеты (13)','--bs-warning')
+									+a('Роллы (9)','--bs-primary')
+									+a('Сашими (8)','--bs-success')
+									+a('Салаты (3)','--bs-secondary')
+									+a('Супы  (8)')
+									+a('Горячее (9)')
+									+a('Поке  (8)')
+									+a('Пицца (1)')
+									+a('Бенто-обеды (0)')
+									+a('Напитки (18)')
+				table(class="table   table-hover  ")
+					thead
+						tr
+							mixin th(t)
+								th(scope="col").bg-secondary.text-white&attributes(attributes)= t
+							+th(`Фото`).text-center
+							+th(`Название`)
+							+th(`Артикул`)
+							+th(`Цена`)
+							+th(`Видимость`)
+							+th(`Удалить`)
+					tbody
+						mixin tr(data)
+							tr
+								td.text-center 
+									div.mx-auto( class="ratio" style="--bs-aspect-ratio: 66%; width: 57px").bg-wrap
+										img(src="img/prod.png", alt="").img-bg
+								td= data.t3
+								td= data.t4
+								td= data.t5
+								td
+									.form-check.form-switch
+										input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
+								td
+									button.btn.px-1(type="button")
+										img(src="img/delete.svg", alt="")
+
+						- for (var x = 0; x < 20; x++)
+							+tr({ 
+								t3:`Ролл жаренный с лососем`,
+								t4:`3242`,
+								t5:`132 р.`, 
+							})
+
+					
+
+	//- +footer()
+      
+
+
+

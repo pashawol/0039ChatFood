@@ -1,5 +1,5 @@
-mixin header()
-	header.bg-white.border-bottom
+mixin header(menu)
+	header.header.bg-white.border-bottom
 		nav.navbar.navbar-light.navbar-expand-xl.border-bottom
 			.container-fluid
 				a.navbar-brand(href='#').order-xl-first
@@ -25,19 +25,33 @@ mixin header()
 						+a('Аналитика')
 						+a('Настройки')
 						+a('Поддержка')
-		nav.navbar.navbar-light.navbar-expand-lg
-			.container-fluid
-				.navbar-brand Все заказы (55)
-				button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav2' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-					span.navbar-toggler-icon
-				#navbarNav2.collapse.navbar-collapse
-					ul.navbar-nav.navbar-nav--color
-						li.nav-item
-							a.nav-link.active(aria-current='page' href='#') Все
-						mixin a(a, c)
-							li.nav-item: a.nav-link(href='#' style=`--color: var(${c})`)= a
-						+a('Новый','--bs-danger')
-						+a('Принят','--bs-warning')
-						+a('В пути','--bs-primary')
-						+a('Доставлен','--bs-success')
-						+a('Архив','--bs-secondary')
+		if menu=="menu" 
+			nav.navbar.navbar-light.navbar-expand
+				.container-fluid.d-lg-flex.d-block
+					.navbar-brand Блюда ресторана (435) 
+					#navbarNav2.collapse.navbar-collapse
+						form.row
+							.col-auto
+								button.btn.btn-light(type="button") Разделы меню
+							.col-auto
+								button.btn.btn-primary(type="button") Добавить товар
+							.col
+								 
+								.input-group
+									input.form-control(type='text' placeholder="Поиск по товарам" aria-label="Recipient's username" aria-describedby='button-addon2')
+									button#button-addon2.btn.btn-primary(type='button') Найти
+		else
+			nav.navbar.navbar-light.navbar-expand
+				.container-fluid.d-lg-flex.d-block
+					.navbar-brand Все заказы (55) 
+					#navbarNav2.collapse.navbar-collapse
+						ul.navbar-nav.navbar-nav--color
+							li.nav-item
+								a.nav-link.active(aria-current='page' href='#') Все
+							mixin a(a, c)
+								li.nav-item: a.nav-link(href='#' style=`--color: var(${c})`)= a
+							+a('Новый','--bs-danger')
+							+a('Принят','--bs-warning')
+							+a('В пути','--bs-primary')
+							+a('Доставлен','--bs-success')
+							+a('Архив','--bs-secondary')

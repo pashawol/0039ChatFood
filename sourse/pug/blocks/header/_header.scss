@@ -1,6 +1,15 @@
 
 	// start .header
 	.header {
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include media-breakpoint-up(xl) {
+			width: calc(100% - 14px);
+		}
+		width: 100%;
+		z-index: 4;
+
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
