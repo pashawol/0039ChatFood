@@ -606,7 +606,7 @@ $table-variants: ("primary": shift-color($primary, $table-bg-scale),
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y: .475rem !default;
+$input-btn-padding-y: .975rem !default;
 $input-btn-padding-x: rem(20) !default;
 $input-btn-font-family: null !default;
 $input-btn-font-size: $font-size-base !default;
@@ -978,7 +978,7 @@ $navbar-brand-font-size: $font-size-lg !default;
 $nav-link-height: $font-size-base * $line-height-base+$nav-link-padding-y * 2 !default;
 $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
 $navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) / 2 !default;
-$navbar-brand-margin-end: 1rem !default;
+$navbar-brand-margin-end: 2rem !default;
 
 $navbar-toggler-padding-y: .25rem !default;
 $navbar-toggler-padding-x: .75rem !default;

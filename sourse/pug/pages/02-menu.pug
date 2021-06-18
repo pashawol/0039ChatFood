@@ -19,27 +19,26 @@ block pagecontent
 	.main-block
 		.main-block__inner(style="--minw: 1000px")
 			.container-fluid 
-				.card.mb-4
-					.card-body.border-0.py-0
-						.row 
-							.col-lg-auto.align-self-center По разделам:
-							.col 
-								ul.nav
-									li.nav-item
-										a.nav-link.active(aria-current='page' href='#').py-4 Все (97)
-									mixin a(a, c)
-										li.nav-item: a.nav-link(href='#').py-4= a
-									+a('Суши (5)','--bs-danger')
-									+a('Сеты (13)','--bs-warning')
-									+a('Роллы (9)','--bs-primary')
-									+a('Сашими (8)','--bs-success')
-									+a('Салаты (3)','--bs-secondary')
-									+a('Супы  (8)')
-									+a('Горячее (9)')
-									+a('Поке  (8)')
-									+a('Пицца (1)')
-									+a('Бенто-обеды (0)')
-									+a('Напитки (18)')
+				.bg-white.mb-4.px-4
+					.row 
+						.col-xl-auto.align-self-center.py-3 По разделам:
+						.col 
+							ul.nav
+								li.nav-item
+									a.nav-link.active(aria-current='page' href='#').py-4 Все (97)
+								mixin a(a, c)
+									li.nav-item: a.nav-link(href='#').py-4= a
+								+a('Суши (5)','--bs-danger')
+								+a('Сеты (13)','--bs-warning')
+								+a('Роллы (9)','--bs-primary')
+								+a('Сашими (8)','--bs-success')
+								+a('Салаты (3)','--bs-secondary')
+								+a('Супы  (8)')
+								+a('Горячее (9)')
+								+a('Поке  (8)')
+								+a('Пицца (1)')
+								+a('Бенто-обеды (0)')
+								+a('Напитки (18)')
 				table(class="table   table-hover  ")
 					thead
 						tr

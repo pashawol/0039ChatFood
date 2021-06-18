@@ -1,0 +1,78 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '05-bonuses'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	+header('Настройки бонусной системы')
+	.main-block
+		.container-fluid
+			form.bg-white.p-5
+				.col-xl-7
+					.mb-5
+						h5.fw-normal.mb-3 Бонусные баллы для новых пользователей при регистрации в чат-боте
+						label.row.gx-2.mb-3
+							.col-auto Включено
+							.col-auto
+								.form-check.form-switch
+									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
+							.col-auto.text-secondary Отключено
+						.w-300
+							+input("500 руб")
+					.mb-5
+						h5.fw-normal.mb-3 Реферальная система
+						label.row.gx-2.mb-3
+							.col-auto Включено
+							.col-auto
+								.form-check.form-switch
+									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
+							.col-auto.text-secondary Отключено
+						.row 
+							.col-auto
+								p Приглашенному пользователю начислить:
+								.w-300
+									+input("500 руб")
+							.col-auto
+								p Пригласившему пользователю начислить:
+								.w-300
+									+input("500 руб")
+						+in-c()(checked)
+							span Начислять бонусные баллы пригласившему пользователю после покупки приглашенного пользователя на сумму более:
+						.w-300
+							+input("1000 руб")
+
+					.mb-5
+						h5.fw-normal.mb-3 Кэшбек бонусных баллов при покупке
+						label.row.gx-2.mb-3
+							.col-auto Включено
+							.col-auto
+								.form-check.form-switch
+									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
+							.col-auto.text-secondary Отключено
+						.w-300
+							p Процент кэшбека:
+							+input("5%",'select')
+					.mb-5
+						h5.fw-normal.mb-3 Списание бонусных баллов
+						label.row.gx-2.mb-3
+							.col-auto Включено
+							.col-auto
+								.form-check.form-switch
+									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
+							.col-auto.text-secondary Отключено
+						p Какой процент от стоимости заказа можно оплатить бонусными баллами:
+						.w-300
+							+input("5%",'select')
+					button.btn.btn-primary.w-300(type="button") Сохранить изменения
+

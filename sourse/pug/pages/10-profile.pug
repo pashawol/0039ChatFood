@@ -1,0 +1,43 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '10-profile'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	+header('Профиль организации')
+	.main-block
+		.container-fluid
+			form.bg-white.p-5
+				.col-xl-7
+					.mb-5
+						h5.fw-normal.mb-3 Организация 
+						p Название организации:
+						.w-300
+							+input("Перчини на Революционной")
+						p Логотип:
+
+						+b.cabinet-btn
+							+e.img-wrap
+								img(src="img/avatar.png", alt="")
+							button.btn.px-1(type="button") 
+								img(src="img/edit.svg", alt="")
+							button.btn.px-1(type="button") 
+								img(src="img/delete.svg", alt="")
+							
+					.mb-5
+						h5.fw-normal.mb-3 Тариф
+						p Ваш тариф оплачен до 29.06.2021. Для избежания блокировки приема заказов оплачивайте счет заранее.
+						button.btn.btn-outline-primary.border-2(type="button") Скачать счет на оплату
+					button.btn.btn-primary.w-300(type="button") Сохранить изменения
+

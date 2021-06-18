@@ -1,0 +1,84 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '04-client'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	+header('clients')
+	.main-block
+		.main-block__inner()
+			.container-fluid
+				table(class="table   table-hover  ").text-center
+					thead
+						tr
+							mixin th(t)
+								th(scope="col").bg-secondary.text-white&attributes(attributes)= t
+									block
+							+th()
+								.form-check
+									input.form-check-input(type='checkbox' value='')
+							+th(`ID`) 
+							+th(`Имя`)
+							+th(`Фамилия`)
+							+th(`Username`)
+							+th(`Телефон`)
+							+th(`Адрес`).text-start
+							+th(`Дата регистрации`)
+							+th(`Рефералы`)
+							+th(`Реферал`)
+							+th(`Сумма заказов`)
+							+th(`Баланс бонусов`)
+							+th(`Оплачено бонусами`)
+					tbody
+						mixin tr(data)
+							tr
+								td.text-center 
+									.form-check
+										input.form-check-input(type='checkbox' value='')
+								td= data.t1
+								td= data.t2
+								td= data.t3
+								td= data.t4
+								td= data.t5
+								td.text-start= data.t6
+								td= data.t7
+								td= data.t8
+								td= data.t9
+								td= data.t10 
+								td= data.t11
+								td= data.t12
+
+						- for (var x = 0; x < 2; x++)
+							+tr({ 
+								t1:`id3242`, 
+								t2:`Михаил`, 
+								t3:`Ишметов`, 
+								t4:`arts_man`, 
+								t5:`+7 919 811 28 48`, 
+								t6:`г. Самара, ул. Иванова 5, кв. 5`, 
+								t7:`11.06.2021`, 
+								t8:`7`, 
+								t9:`id3127`, 
+								t10:`13 570 р.`, 
+								t11:`370 р.`, 
+								t12:`1 370 р.` 
+							})
+
+					
+
+	//- +footer()
+      
+
+
+

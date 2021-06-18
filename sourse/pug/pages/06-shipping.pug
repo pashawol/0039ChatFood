@@ -1,0 +1,41 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '06-shipping'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	+header('Параметры доставки')
+	.main-block
+		.container-fluid
+			form.bg-white.p-5
+				.col-xl-7
+					.mb-5
+						h5.fw-normal.mb-3 Бесплатная доставка
+						label.row.gx-2.mb-3
+							.col-auto Включено
+							.col-auto
+								.form-check.form-switch
+									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
+							.col-auto.text-secondary Отключено
+						p Бесплатная доставка при заказе от суммы:
+						.w-300
+							+input("1500 руб")
+					.mb-5
+						h5.fw-normal.mb-3 Стоимость доставки
+						
+						p Стоимость:
+						.w-300
+							+input("500 руб")
+					button.btn.btn-primary.w-300(type="button") Сохранить изменения
+

@@ -38,8 +38,38 @@ mixin header(menu)
 							.col
 								 
 								.input-group
-									input.form-control(type='text' placeholder="Поиск по товарам" aria-label="Recipient's username" aria-describedby='button-addon2')
+									input.form-control(type='text' placeholder="Поиск по товарам" aria-label="Поиск по товарам" aria-describedby='button-addon2')
 									button#button-addon2.btn.btn-primary(type='button') Найти
+		else if menu=="promo" 
+			nav.navbar.navbar-light.navbar-expand
+				.container-fluid.d-lg-flex.d-block
+					.navbar-brand Акции ресторана (1)
+					#navbarNav2.collapse.navbar-collapse
+						form.row 
+							.col-auto
+								button.btn.btn-primary(type="button") Добавить акцию
+							.col
+								 
+								.input-group
+									input.form-control(type='text' placeholder="Поиск по акциям" aria-label="Поиск по акциям" aria-describedby='button-addon2')
+									button#button-addon2.btn.btn-primary(type='button') Найти
+		else if menu=="clients" 
+			nav.navbar.navbar-light.navbar-expand
+				.container-fluid.d-lg-flex.d-block
+					.navbar-brand Клиенты ресторана (987)
+					#navbarNav2.collapse.navbar-collapse
+						form.row 
+							.col-auto
+								button.btn.btn-primary(type="button") Отправить сообщение
+							.col
+								 
+								.input-group
+									input.form-control(type='text' placeholder="Поиск по клиентам" aria-label="Поиск по клиентам" aria-describedby='button-addon2')
+									button#button-addon2.btn.btn-primary(type='button') Найти
+		else if menu
+			nav.navbar.navbar-light.navbar-expand
+				.container-fluid.d-lg-flex.d-block
+					.navbar-brand= menu
 		else
 			nav.navbar.navbar-light.navbar-expand
 				.container-fluid.d-lg-flex.d-block

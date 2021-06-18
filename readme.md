@@ -1,2 +1,10 @@
 1. <https://pashawol.github.io/0039ChatFood/public/>
-2. <https://pashawol.github.io/0039ChatFood/public/02-menu.html>
+1. <https://pashawol.github.io/0039ChatFood/public/02-menu.html>
+1. <https://pashawol.github.io/0039ChatFood/public/03-promo.html>
+1. <https://pashawol.github.io/0039ChatFood/public/04-client.html>
+1. <https://pashawol.github.io/0039ChatFood/public/05-bonuses.html>
+1. <https://pashawol.github.io/0039ChatFood/public/06-shipping.html>
+1. <https://pashawol.github.io/0039ChatFood/public/06-shipping.html>
+1. <https://pashawol.github.io/0039ChatFood/public/08-settings.html>
+2. <https://pashawol.github.io/0039ChatFood/public/09-support.html>
+3. <https://pashawol.github.io/0039ChatFood/public//10-profile.html>

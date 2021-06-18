@@ -1,0 +1,57 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '03 promo'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	+header('promo')
+	.main-block
+		.main-block__inner(style="--minw: 1000px")
+			.container-fluid
+				table(class="table   table-hover  ")
+					thead
+						tr
+							mixin th(t)
+								th(scope="col").bg-secondary.text-white&attributes(attributes)= t
+							+th(`Фото`).text-center
+							+th(`Название`) 
+							+th(`Видимость`)
+							+th(`Удалить`)
+					tbody
+						mixin tr(data)
+							tr
+								td.text-center 
+									div.mx-auto( class="ratio" style="--bs-aspect-ratio: 100%; width: 40px").bg-wrap
+										img(src="img/promo.png", alt="").img-bg
+								td= data.t3
+						
+								td
+									.form-check.form-switch
+										input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
+								td
+									button.btn.px-1(type="button")
+										img(src="img/delete.svg", alt="")
+
+						- for (var x = 0; x < 2; x++)
+							+tr({ 
+								t3:`PARTY-CASE Наборы из алкогольных и б/а напитков...` 
+							})
+
+					
+
+	//- +footer()
+      
+
+
+

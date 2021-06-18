@@ -1,0 +1,23 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= '09-support'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	+header('Поддержка')
+	.main-block
+		.container-fluid
+			.bg-white.p-5
+				.col-xl-7
+					.bg-light.p-5 Виджет чата

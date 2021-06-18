@@ -498,7 +498,7 @@ iframe {
 }
 
 .navbar-brand{
-	min-zwidth: rem(160px);
+	min-width: rem(160px);
 	img{
 		@extend  .res-i;
 	}
@@ -535,14 +535,14 @@ iframe {
 
 }
 .main-block{
-	padding-top: var(--header-h);
+	padding-top: calc(var(--header-h) + #{rem(30)});
 	max-height: calc(100vh);
 	position: relative;
 	overflow: auto;
 	background-color: $body-bg;
+	 
+	padding-bottom: rem(30);
 	&__inner{
-		padding-top: rem(30);
-		padding-bottom: rem(30);
 		min-width: var(--minw, #{rem(1920)});
 	}
 }
@@ -594,4 +594,21 @@ th{
 			border-color:$primary;
 		}
 	}
+}
+
+
+.w-300{
+	width: 300px;
+}
+.custom-input,
+.input-wrap{
+	margin-bottom: rem(30);
+}
+
+.custom-input{
+	max-width: rem(540);
+}
+
+.btn{
+	font-weight: bold;
 }
