@@ -12,7 +12,27 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-
+	style.
+		[title="Новый"],
+		[data-select2-id$='Новый'] {
+			--color: var(--bs-danger)
+		}
+		[title="Принят"],
+		[data-select2-id$='Принят'] {
+			--color: var(--bs-warning)
+		}
+		[title="В пути"],
+		[data-select2-id$='В пути'] {
+			--color: var(--bs-primary)
+		}
+		[title="Доставлен"],
+		[data-select2-id$='Доставлен'] {
+			--color: var(--bs-success)
+		}
+		[title="Архив"],
+		[data-select2-id$='Архив'] {
+			--color: var(--bs-secondary)
+		}
 
 	//- +mob-mnu()
 	+header()
@@ -40,31 +60,38 @@ block pagecontent
 							+th(`Время доставки`)
 					tbody
 						mixin tr(data)
-							tr
-								td= data.t1
+							tr( )
+							
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t1
+
 								td
-									select.form-select
-										option(style="color:var(--bs-danger") Новый
-										option(style="color:") Принят
-										option(style="color:") В пути
-										option(style="color:") Доставлен
-										option(style="color:") Архив
-								td= data.t3
-								td= data.t4
-								td= data.t5
-								td= data.t6
-								td= data.t7
-								td= data.t8 
-								td= data.t9
-								td= data.t10
-								td= data.t11
-								td= data.t12
-								td= data.t13
-								td= data.t14
+									.select-wrap.select-wrap--with-color
+										select.form-select.select-custom.select-custom--with-color
+											mixin a(a, c)
+												option(href='#'  value= a)= a
+											+a('Новый')
+											+a('Принят')
+											+a('В пути')
+											+a('Доставлен')
+											+a('Архив')
+										
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t3
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t4
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t5
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t6
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t7
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t8 
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t9
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t10
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t11
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t12
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t13
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t14
 						- for (var x = 0; x < 50; x++)
 							+tr({
+								x,
 								t1:`21-17`,
-								t3:`Константин Конст...`,
+								t3:`Константинопольский Константин`,
 								t4:`+7 (917) 811-27-37`,
 								t5:`18:22, 10-06-2021`,
 								t6:`Ленина 87, кв 5`,
@@ -77,11 +104,121 @@ block pagecontent
 								t13:`Онлайн оплата`,
 								t14: `Как можно скорее`
 							})
+				
 
-					
-
-	//- +footer()
-      
-
-
-
+	mixin modal-left(data)
+		.offcanvas.offcanvas-start(id=`offcanvasExample-${data.x}` tabindex='-1' aria-labelledby=`offcanvasExample-${data.x}-Label`).text-start
+			.offcanvas-header
+				h4.offcanvas-title(id=`offcanvasExample-${data.x}-Label`) Информация о заказе 
+					= data.x
+				button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+			.offcanvas-body
+				table.table
+					tr
+						td()
+							| № заказа: 
+							= data.t1 
+					tr  
+						td()
+							span Статус:  
+							.select-wrap.select-wrap--with-color
+								select.form-select.select-custom.select-custom--with-color
+									mixin a(a, c)
+										option(href='#'  value= a)= a
+									+a('Новый')
+									+a('Принят')
+									+a('В пути')
+									+a('Доставлен')
+									+a('Архив')
+					tr 
+						td()
+							| Клиент: 
+							= data.t3 
+					tr 
+						td()
+							| Телефон: 
+							= data.t4 
+					tr 
+						td()
+							| Дата: 
+							= data.t5 
+					tr 
+						td()
+							| Адрес: 
+							= data.t6 
+					tr 
+						td()
+							| Сумма итого: 
+							= data.t7
+					tr 
+						td()
+							| Сумма заказа:  
+							= data.t8 
+					tr 
+						td()
+							| Сумма доставки:  
+							= data.t9
+					tr 
+						td()
+							| Сумма скидки: 
+							= data.t10
+					tr 
+						td()
+							| Доставка:  
+							= data.t11
+					tr 
+						td()
+							| Комменарий:  
+							= data.t12
+					tr 
+						td()
+							| Способ оплаты:  
+							= data.t13
+					tr 
+						td() Доставка: курьером
+					tr 
+						td() Комментарий к заказу: Вход напротив ресторана “Перчини”
+					tr 
+						td() Способ оплаты: онлайн оплата
+					tr 
+						td() Время доставки: как можно скорее
+			.offcanvas-sidebar
+				.offcanvas-header
+					h4.offcanvas-title Состав заказа (3)
+				.offcanvas-body
+					- for (var x = 0; x < 3; x++)
+						.py-3.border-bottom 
+							div.mb-3( class="ratio" style="--bs-aspect-ratio: 66%; width: 83px").bg-wrap
+								img(src="img/prod.jpeg", alt="").img-bg
+							.mb-1 Ролл жаренный с лососем
+							.mb-1 Цена: 390 р.
+							.mb-1 Состав: Рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+							.mb-1 Вес: 270 гр.
+					.py-3
+						.mb-1 Сумма заказа: 1330 р.
+						.mb-1 Сумма доставки: 350 р.
+						.mb-1 Сумма скидки: -240 р.
+						.mt-3.strong.h5 Сумма итого: 1460 р.
+	- for (var x = 0; x < 50; x++)
+		+modal-left({
+			x,
+			t1:`21-17`,
+			t3:`Константинопольский Константин`,
+			t4:`+7 (917) 811-27-37`,
+			t5:`18:22, 10-06-2021`,
+			t6:`Ленина 87, кв 5`,
+			t7:`1460 р.`,
+			t8:`1330 р.`,
+			t9:`350 р.`,
+			t10:`-240 р.`,
+			t11:`Курьером`,
+			t12:`Вход напротив...`,
+			t13:`Онлайн оплата`,
+			t14: `Как можно скорее`
+		})
+	.alert.alert-danger.fixed-bottom
+		.container-fluid
+			.row.align-items-center
+				.col-xxl-auto.col.py-1 Уважаемый клиент! Необходимо продлить подписку для дальнейшего пользования сервисом ChatFood. Прием заказов и платежей приостановлен.
+				.col-sm-auto 
+					a.btn.btn-primary.px-5(href="#") Скачать счет на оплату

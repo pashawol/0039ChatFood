@@ -618,9 +618,9 @@ $input-btn-focus-color: rgba($component-active-bg, $input-btn-focus-color-opacit
 $input-btn-focus-blur: 0 !default;
 $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: .25rem !default;
+$input-btn-padding-y-sm: .45rem !default;
 $input-btn-padding-x-sm: .5rem !default;
-$input-btn-font-size-sm: $font-size-sm !default;
+$input-btn-font-size-sm: $font-size-base !default;
 
 $input-btn-padding-y-lg: .5rem !default;
 $input-btn-padding-x-lg: 1rem !default;
@@ -929,8 +929,8 @@ $form-validation-states: ("valid": ("color": $form-feedback-valid-color,
 $zindex-dropdown: 1000 !default;
 $zindex-sticky: 1020 !default;
 $zindex-fixed: 1030 !default;
-$zindex-offcanvas: 1040 !default;
-$zindex-modal-backdrop: 1050 !default;
+$zindex-offcanvas: 1050 !default;
+$zindex-modal-backdrop: 1040 !default;
 $zindex-modal: 1060 !default;
 $zindex-popover: 1070 !default;
 $zindex-tooltip: 1080 !default;
@@ -1471,7 +1471,7 @@ $btn-close-white-filter: invert(1) grayscale(100%) brightness(200%) !default;
 // scss-docs-start offcanvas-variables
 $offcanvas-padding-y: $modal-inner-padding !default;
 $offcanvas-padding-x: $modal-inner-padding !default;
-$offcanvas-horizontal-width: 400px !default;
+$offcanvas-horizontal-width: 360px !default;
 $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: .3s !default;
 $offcanvas-border-color: $modal-content-border-color !default;

@@ -32,11 +32,93 @@ mixin header(menu)
 					#navbarNav2.collapse.navbar-collapse
 						form.row
 							.col-auto
-								button.btn.btn-light(type="button") Разделы меню
+								button.btn.btn-light(type="button" data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-menu` aria-controls=`offcanvasExample-add-menu`) Разделы меню
+
+								.offcanvas.offcanvas-start(id=`offcanvasExample-add-menu` tabindex='-1' aria-labelledby=`offcanvasExample-add-menu-Label`).text-start
+									.offcanvas-header
+										h4.offcanvas-title(id=`offcanvasExample-add-menu-Label`) Категории меню
+										button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+									.offcanvas-body
+										table.table 
+											tr: td.strong Все
+											mixin tr(t)
+												tr: td
+													.input-group
+														input.form-control.form-control-sm(type='text' value= t )
+														button.btn.btn-outline-danger.btn-sm(type='button'  aria-label='Close' data-bs-toggle="modal" data-bs-target="#exampleModaldel")
+															+icon("delete")
+													
+											+tr("Суши")
+											+tr("Сеты")
+											+tr("Роллы")
+											+tr("Сашими")
+											+tr("Салаты")
+											+tr("Супы")
+											+tr("Горячее")
+											+tr("Поке")
+											+tr("Пицца")
+											+tr("Бенто-обеды")
+											+tr("Напитки")
+										button.btn.btn-primary.ms-3(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal") Добавить категорию
+
+
+
+							#exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+								.modal-dialog
+									.modal-content
+										.modal-header
+											h5#exampleModalLabel.modal-title Создать новую категорию
+											button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+										.modal-body
+											p Название:
+											+input("Введите название")
+										.modal-footer
+											button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
+											button.btn.btn-primary(type='button') Создать категорию
+							#exampleModaldel.modal.fade(tabindex='-1' aria-labelledby='exampleModaldelLabel' aria-hidden='true')
+								.modal-dialog
+									.modal-content
+										.modal-header
+											h5#exampleModaldelLabel.modal-title Вы уверены, что хотите удалить товар (или категорию)?
+											button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+										.modal-footer
+											button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Да
+											button.btn.btn-primary(type='button') Нет
+
 							.col-auto
-								button.btn.btn-primary(type="button") Добавить товар
+								button.btn.btn-primary(type="button" data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-product` aria-controls=`offcanvasExample-add-product`) Добавить товар
+								.offcanvas.offcanvas-start(id=`offcanvasExample-add-product` tabindex='-1' aria-labelledby=`offcanvasExample-add-product-Label`).text-start
+									.offcanvas-header
+										h4.offcanvas-title(id=`offcanvasExample-add-product-Label`) Добавление/редактирование товара
+										button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+									.offcanvas-body
+										p Название товара:
+										+input()(value="Ролл жаренный с лососем")
+										.row.mb-3.gx-1.align-item-center
+											.col Фото товара:
+											.col-auto
+												button.btn.px-1
+													img(src="img/edit.svg", alt="")
+											.col-auto
+												button.btn.px-1
+													img(src="img/delete.svg", alt="")
+											.col-auto
+
+										div.mb-3( class="ratio" style="--bs-aspect-ratio: 66%; width: 300px").bg-wrap
+											img(src="img/prod.jpeg", alt="").img-bg
+										p Артикул товара:
+										+input()(value="3242")
+										p Цена товара:
+										+input()(value="190 р.")
+										p Описание товара:
+										.input-wrap
+											textara.form-control
+												| Состав:
+												| рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+												| Вес: 270 гр.
+										button.btn.btn-primary(type="button") Добавить категорию
 							.col
-								 
+								
 								.input-group
 									input.form-control(type='text' placeholder="Поиск по товарам" aria-label="Поиск по товарам" aria-describedby='button-addon2')
 									button#button-addon2.btn.btn-primary(type='button') Найти
@@ -47,9 +129,33 @@ mixin header(menu)
 					#navbarNav2.collapse.navbar-collapse
 						form.row 
 							.col-auto
-								button.btn.btn-primary(type="button") Добавить акцию
+								button.btn.btn-primary(type="button" data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-promo` aria-controls=`offcanvasExample-add-promo`) Добавить акцию
+
+								.offcanvas.offcanvas-start(id=`offcanvasExample-add-promo` tabindex='-1' aria-labelledby=`offcanvasExample-add-promo-Label`).text-start
+									.offcanvas-header
+										h4.offcanvas-title(id=`offcanvasExample-add-promo-Label`) Добавление/редактирование акции
+										button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+									.offcanvas-body
+										.row.mb-3.gx-1.align-item-center
+											.col Фото акции
+											.col-auto
+												button.btn.px-1
+													img(src="img/edit.svg", alt="")
+											.col-auto
+												button.btn.px-1
+													img(src="img/delete.svg", alt="") 
+
+										div.mb-3()
+											img.res-i(src="img/promo.jpeg", alt="")
+
+										p Описание товара:
+										.input-wrap
+											textara.form-control
+												| Состав:
+												| рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+												| Вес: 270 гр.
+										button.btn.btn-primary(type="button") Сохранить
 							.col
-								 
 								.input-group
 									input.form-control(type='text' placeholder="Поиск по акциям" aria-label="Поиск по акциям" aria-describedby='button-addon2')
 									button#button-addon2.btn.btn-primary(type='button') Найти
@@ -60,7 +166,7 @@ mixin header(menu)
 					#navbarNav2.collapse.navbar-collapse
 						form.row 
 							.col-auto
-								button.btn.btn-primary(type="button") Отправить сообщение
+								button.btn.btn-primary(type="button" data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-message` aria-controls=`offcanvasExample-message`) Отправить сообщение
 							.col
 								 
 								.input-group
