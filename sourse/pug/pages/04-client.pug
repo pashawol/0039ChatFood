@@ -46,21 +46,22 @@ block pagecontent
 								td.text-center 
 									.form-check
 										input.form-check-input(type='checkbox' value='')
-								td= data.t1
-								td= data.t2
-								td= data.t3
-								td= data.t4
-								td= data.t5
-								td.text-start= data.t6
-								td= data.t7
-								td= data.t8
-								td= data.t9
-								td= data.t10 
-								td= data.t11
-								td= data.t12
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t1
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t2
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t3
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t4
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t5
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`).text-start= data.t6
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t7
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t8
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t9
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t10 
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t11
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t12
 
 						- for (var x = 0; x < 2; x++)
 							+tr({ 
+								x,
 								t1:`id3242`, 
 								t2:`Михаил`, 
 								t3:`Ишметов`, 
@@ -75,10 +76,117 @@ block pagecontent
 								t12:`1 370 р.` 
 							})
 
+				button.btn.btn-sm.btn-success.px-3(data-bs-toggle="modal" data-bs-target="#modalThanks") Успешно!
+				button.btn.btn-sm.btn-success.px-3(data-bs-toggle="modal" data-bs-target="#modalM") Ошибка!
 					
 
-	//- +footer()
-      
+	mixin modal-left(data)
+		.offcanvas.offcanvas-start(id=`offcanvasExample-${data.x}` tabindex='-1' aria-labelledby=`offcanvasExample-${data.x}-Label`).text-start
+			.offcanvas-header 
+				h4.offcanvas-title(id=`offcanvasExample-${data.x}-Label`) Карточка клиента
+				button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close') 
+			.offcanvas-body
+				table.table
+					mixin tr(t)
+						tr: td
+							.d-flex.align-items-center= t
+								block
+					+tr(`ID: id34232`)
+					+tr(`Имя: Михаил`)
+					+tr(`Фамилия: Иванов`)
+					+tr(`Username: arts_man`)
+					+tr(`Телефон: +79198112848`)
+					+tr(`Адрес: г. Самара, ул. Иванова 5, кв. 5`)
+					+tr(`Дата регистрации: 11.06.2021`)
+					+tr(`Рефералы: 7`)
+					+tr(`Реферал: id3127`)
+					+tr(`Сумма заказов: 13 570 р.`)
+					+tr(`Баланс бонусов: 370 р.`)
+						span.ms-auto 
+							button.btn.btn-sm.btn-danger.px-3(data-bs-toggle="modal" data-bs-target="#exampleModalBonusMinus") -
 
+							button.btn.btn-sm.btn-success.px-3(data-bs-toggle="modal" data-bs-target="#exampleModalBonus") +
+					+tr(`Оплачено бонусами: 1 370 р.`)
+				p Комментарий:
+				.input-wrap
+					textarea.form-control Хороший человек.
+				button.btn.btn-primary(type="button") Сохранить
+				br
+				br
+				br
+				p Написать сообщение:
+				.input-wrap
+					textarea.form-control(placeholder="Ваше сообщение")
+				.row
+					.col
+						button.btn.px-1
+							img.me-1(src="img/img.svg", alt="")
+							| Прикрепить фото
+					.col-auto
+						button.btn.px-1(type="button")
+							img(src="img/send.svg", alt="")
+	- for (var x = 0; x < 2; x++)
+		+modal-left({x})
+	.offcanvas.offcanvas-start(id=`offcanvasExample-message` tabindex='-1' aria-labelledby=`offcanvasExample-message-Label`).text-start
+		.offcanvas-header 
+			h4.offcanvas-title(id=`offcanvasExample-message-Label`) Отправить сообщение выбранным клиентам (117)
+			button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close') 
+		.offcanvas-body
+		
+			.row.mb-3.gx-1.align-item-center
+				.col Фото:
+				.col-auto
+					button.btn.px-1
+						img(src="img/edit.svg", alt="")
+				.col-auto
+					button.btn.px-1
+						img(src="img/delete.svg", alt="") 
 
+			div.mb-3()
+				img.res-i(src="img/promo.jpeg", alt="")
+			p Написать сообщение:
+			.input-wrap
+				textarea.form-control(placeholder="Ваше сообщение")
+			.row
+				.col
+					button.btn.px-1
+						img.me-1(src="img/img.svg", alt="")
+						| Прикрепить фото
+				.col-auto
+					button.btn.px-1(type="button")
+						img(src="img/send.svg", alt="")
 
+	#exampleModalBonus.modal.fade(tabindex='-1' aria-labelledby='exampleModalBonusLabel' aria-hidden='true')
+		.modal-dialog
+			.modal-content
+				.modal-header
+					.row 
+						.col-auto
+							button.btn.btn-sm.btn-success.px-3() +
+						h5#exampleModalBonusLabel.modal-title.col.pt-2 Начислить бонусы клиенту
+					button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				.modal-body
+					p Начислить:
+					+input("Введите сумму")
+					+in-c()(checked)
+						span Уведомить клиента о начислении
+				.modal-footer
+					button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
+					button.btn.btn-primary(type='button') Создать категорию
+	#exampleModalBonusMinus.modal.fade(tabindex='-1' aria-labelledby='exampleModalBonusMinusLabel' aria-hidden='true')
+		.modal-dialog
+			.modal-content
+				.modal-header
+					.row 
+						.col-auto
+							button.btn.btn-sm.btn-danger.px-3() -
+						h5#exampleModalBonusMinusLabel.modal-title.col.pt-2 Списать бонусы у клиента
+					button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				.modal-body
+					p Списать: 
+					+input("Введите сумму")
+					+in-c()(checked)
+						span Уведомить клиента о начислении
+				.modal-footer
+					button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
+					button.btn.btn-primary(type='button') Создать категорию
