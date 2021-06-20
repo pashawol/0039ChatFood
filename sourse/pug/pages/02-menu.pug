@@ -53,12 +53,12 @@ block pagecontent
 					tbody
 						mixin tr(data)
 							tr
-								td.text-center 
+								td.text-center(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-product-${data.x}` aria-controls=`offcanvasExample-add-product-${data.x}`) 
 									div.mx-auto( class="ratio" style="--bs-aspect-ratio: 66%; width: 57px").bg-wrap
 										img(src="img/prod.jpeg", alt="").img-bg
-								td= data.t3
-								td= data.t4
-								td= data.t5
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-product-${data.x}` aria-controls=`offcanvasExample-add-product-${data.x}`)= data.t3
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-product-${data.x}` aria-controls=`offcanvasExample-add-product-${data.x}`)= data.t4
+								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-product-${data.x}` aria-controls=`offcanvasExample-add-product-${data.x}`)= data.t5
 								td
 									.form-check.form-switch
 										input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
@@ -68,6 +68,7 @@ block pagecontent
 
 						- for (var x = 0; x < 20; x++)
 							+tr({ 
+								x,
 								t3:`Ролл жаренный с лососем`,
 								t4:`3242`,
 								t5:`132 р.`, 
@@ -75,8 +76,37 @@ block pagecontent
 
 					
 
-	//- +footer()
-      
+	mixin modal-left(data)
+		.offcanvas.offcanvas-start(id=`offcanvasExample-add-product-${data.x}` tabindex='-1' aria-labelledby=`offcanvasExample-add-product-${data.x}-Label`).text-start
+			.offcanvas-header
+				h4.offcanvas-title(id=`offcanvasExample-add-product-${data.x}-Label`) Добавление/редактирование товара
+				button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+			.offcanvas-body
+				p Название товара:
+				+input()(value="Ролл жаренный с лососем")
+				.row.mb-3.gx-1.align-item-center
+					.col Фото товара:
+					.col-auto
+						button.btn.px-1
+							img(src="img/edit.svg", alt="")
+					.col-auto
+						button.btn.px-1
+							img(src="img/delete.svg", alt="")
+					.col-auto
 
-
-
+				div.mb-3( class="ratio" style="--bs-aspect-ratio: 66%; width: 300px").bg-wrap
+					img(src="img/prod.jpeg", alt="").img-bg
+				p Артикул товара:
+				+input()(value="3242")
+				p Цена товара:
+				+input()(value="190 р.")
+				p Описание товара:
+				.input-wrap
+					textarea.form-control
+						| Состав:
+						| рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+						| Вес: 270 гр.
+				button.btn.btn-primary(type="button") Сохранить товар
+	- for (var x = 0; x < 20; x++)
+		+modal-left({x})
+		

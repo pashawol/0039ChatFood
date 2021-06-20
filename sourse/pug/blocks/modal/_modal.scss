@@ -3,6 +3,17 @@
 	width: 100%;
 	position: relative;
 	max-width: rem(500);
+	padding: 0;
+	.modal-content{
+		pointer-events: all;
+	}
+	border-radius: .3rem;
+		.modal-dialog{
+			margin: 0;
+		}
+	.btn-close{
+		display: none;
+	}
 
 	.modal-content {
 		// max-width: 485px;

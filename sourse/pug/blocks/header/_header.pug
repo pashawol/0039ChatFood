@@ -32,9 +32,9 @@ mixin header(menu)
 					#navbarNav2.collapse.navbar-collapse
 						form.row
 							.col-auto
-								button.btn.btn-light(type="button" data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-menu` aria-controls=`offcanvasExample-add-menu`) Разделы меню
+								button.btn.btn-light(type="button"  data-bs-toggle="offcanvas"   data-bs-scroll="true" data-bs-target=`#offcanvasExample-add-menu` aria-controls=`offcanvasExample-add-menu`) Разделы меню
 
-								.offcanvas.offcanvas-start(id=`offcanvasExample-add-menu` tabindex='-1' aria-labelledby=`offcanvasExample-add-menu-Label`).text-start
+								.offcanvas.offcanvas-start(id=`offcanvasExample-add-menu`  data-bs-scroll="true" tabindex='-1' aria-labelledby=`offcanvasExample-add-menu-Label`).text-start
 									.offcanvas-header
 										h4.offcanvas-title(id=`offcanvasExample-add-menu-Label`) Категории меню
 										button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
@@ -63,31 +63,11 @@ mixin header(menu)
 
 
 
-							#exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
-								.modal-dialog
-									.modal-content
-										.modal-header
-											h5#exampleModalLabel.modal-title Создать новую категорию
-											button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-										.modal-body
-											p Название:
-											+input("Введите название")
-										.modal-footer
-											button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
-											button.btn.btn-primary(type='button') Создать категорию
-							#exampleModaldel.modal.fade(tabindex='-1' aria-labelledby='exampleModaldelLabel' aria-hidden='true')
-								.modal-dialog
-									.modal-content
-										.modal-header
-											h5#exampleModaldelLabel.modal-title Вы уверены, что хотите удалить товар (или категорию)?
-											button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-										.modal-footer
-											button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Да
-											button.btn.btn-primary(type='button') Нет
+							
 
 							.col-auto
-								button.btn.btn-primary(type="button" data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-product` aria-controls=`offcanvasExample-add-product`) Добавить товар
-								.offcanvas.offcanvas-start(id=`offcanvasExample-add-product` tabindex='-1' aria-labelledby=`offcanvasExample-add-product-Label`).text-start
+								button.btn.btn-primary(type="button"  data-bs-toggle="offcanvas"   data-bs-scroll="true" data-bs-target=`#offcanvasExample-add-product` aria-controls=`offcanvasExample-add-product`) Добавить товар
+								.offcanvas.offcanvas-start(id=`offcanvasExample-add-product`  data-bs-scroll="true"  tabindex='-1' aria-labelledby=`offcanvasExample-add-product-Label`).text-start
 									.offcanvas-header
 										h4.offcanvas-title(id=`offcanvasExample-add-product-Label`) Добавление/редактирование товара
 										button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
@@ -112,11 +92,13 @@ mixin header(menu)
 										+input()(value="190 р.")
 										p Описание товара:
 										.input-wrap
-											textara.form-control
+											textarea.form-control
 												| Состав:
 												| рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
 												| Вес: 270 гр.
-										button.btn.btn-primary(type="button") Добавить категорию
+										button.btn.btn-primary(type="button") Сохранить товар
+							
+									
 							.col
 								
 								.input-group
@@ -129,7 +111,7 @@ mixin header(menu)
 					#navbarNav2.collapse.navbar-collapse
 						form.row 
 							.col-auto
-								button.btn.btn-primary(type="button" data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-add-promo` aria-controls=`offcanvasExample-add-promo`) Добавить акцию
+								button.btn.btn-primary(type="button"  data-bs-toggle="offcanvas"   data-bs-scroll="true" data-bs-target=`#offcanvasExample-add-promo` aria-controls=`offcanvasExample-add-promo`) Добавить акцию
 
 								.offcanvas.offcanvas-start(id=`offcanvasExample-add-promo` tabindex='-1' aria-labelledby=`offcanvasExample-add-promo-Label`).text-start
 									.offcanvas-header
@@ -150,7 +132,7 @@ mixin header(menu)
 
 										p Описание товара:
 										.input-wrap
-											textara.form-control
+											textarea.form-control
 												| Состав:
 												| рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
 												| Вес: 270 гр.
@@ -166,7 +148,7 @@ mixin header(menu)
 					#navbarNav2.collapse.navbar-collapse
 						form.row 
 							.col-auto
-								button.btn.btn-primary(type="button" data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-message` aria-controls=`offcanvasExample-message`) Отправить сообщение
+								button.btn.btn-primary(type="button"  data-bs-toggle="offcanvas"   data-bs-scroll="true" data-bs-target=`#offcanvasExample-message` aria-controls=`offcanvasExample-message`) Отправить сообщение
 							.col
 								 
 								.input-group

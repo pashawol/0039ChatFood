@@ -23,21 +23,21 @@ block pagecontent
 					.mb-5
 						h5.fw-normal.mb-3 Бонусные баллы для новых пользователей при регистрации в чат-боте
 						label.row.gx-2.mb-3
-							.col-auto Включено
+							.col-auto.text-secondary Отключено
 							.col-auto
 								.form-check.form-switch
 									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
-							.col-auto.text-secondary Отключено
+							.col-auto Включено
 						.w-300
 							+input("500 руб")
 					.mb-5
 						h5.fw-normal.mb-3 Реферальная система
 						label.row.gx-2.mb-3
-							.col-auto Включено
+							.col-auto.text-secondary Отключено
 							.col-auto
 								.form-check.form-switch
 									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
-							.col-auto.text-secondary Отключено
+							.col-auto Включено
 						.row 
 							.col-auto
 								p Приглашенному пользователю начислить:
@@ -55,22 +55,22 @@ block pagecontent
 					.mb-5
 						h5.fw-normal.mb-3 Кэшбек бонусных баллов при покупке
 						label.row.gx-2.mb-3
-							.col-auto Включено
+							.col-auto.text-secondary Отключено
 							.col-auto
 								.form-check.form-switch
 									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
-							.col-auto.text-secondary Отключено
+							.col-auto Включено
 						.w-300
 							p Процент кэшбека:
 							+input("5%",'select')
 					.mb-5
 						h5.fw-normal.mb-3 Списание бонусных баллов
 						label.row.gx-2.mb-3
-							.col-auto Включено
+							.col-auto.text-secondary Отключено
 							.col-auto
 								.form-check.form-switch
 									input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
-							.col-auto.text-secondary Отключено
+							.col-auto Включено
 						p Какой процент от стоимости заказа можно оплатить бонусными баллами:
 						.w-300
 							+input("5%",'select')

@@ -63,12 +63,100 @@
 			</div>
 		</div>
 		<!--  start modals-->
+		<div class="modal fade" id="exampleModalBonus">
+			<form class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="row"> 
+							<div class="col-auto">
+								<button class="btn btn-sm btn-success px-3">+</button>
+							</div>
+							<h5 class="modal-title col pt-2" id="exampleModalBonusLabel">Начислить бонусы клиенту</h5>
+						</div>
+						<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Начислить:</p>
+						<div class="input-wrap form-group"><input class="input form-control" name="text" type="text" placeholder="Введите сумму"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span>Уведомить клиента о начислении</span>
+						</label>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Отменить</button>
+						<button class="btn btn-primary" type="button">Создать категорию</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal fade" id="exampleModalBonusMinus">
+			<form class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="row"> 
+							<div class="col-auto">
+								<button class="btn btn-sm btn-danger px-3">-</button>
+							</div>
+							<h5 class="modal-title col pt-2" id="exampleModalBonusMinusLabel">Списать бонусы у клиента</h5>
+						</div>
+						<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Списать: </p>
+						<div class="input-wrap form-group"><input class="input form-control" name="text" type="text" placeholder="Введите сумму"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span>Уведомить клиента о списании</span>
+						</label>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Отменить</button>
+						<button class="btn btn-primary" type="button">Создать категорию</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Создать новую категорию</h5>
+						<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Название:</p>
+						<div class="input-wrap form-group"><input class="input form-control" name="text" type="text" placeholder="Введите название"/>
+						</div>
+						<!-- +e.input-wrap-->
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Отменить</button>
+						<button class="btn btn-primary" type="button">Создать категорию</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModaldel" tabindex="-1" aria-labelledby="exampleModaldelLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModaldelLabel">Вы уверены, что хотите удалить товар (или категорию)?</h5>
+						<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Да</button>
+						<button class="btn btn-primary" type="button">Нет</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="modal fade" id="modalThanks" tabindex="-1" aria-labelledby="modalThanksLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content"> 
 					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
 					<div class="modal-body text-center"><br/><br/><br/><img class="mb-2" src="img/check.svg" alt=""/>
-						<div class="h4">Успешно! </div>
+						<div class="h4">Успешно! </div><br/><br/><br/>
 					</div>
 				</div>
 			</div>
@@ -78,7 +166,7 @@
 				<div class="modal-content">
 					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
 					<div class="modal-body text-center"><br/><br/><br/><img class="mb-2" src="img/block_black.svg" alt=""/>
-						<div class="h4">Ошибка!</div>
+						<div class="h4">Ошибка!</div><br/><br/><br/>
 					</div>
 				</div>
 			</div>
@@ -86,6 +174,7 @@
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>

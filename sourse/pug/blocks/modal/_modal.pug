@@ -1,6 +1,61 @@
 
 mixin modal() 
 	//  start modals
+	#exampleModalBonus.modal.fade( )
+		form.modal-dialog
+			.modal-content
+				.modal-header
+					.row 
+						.col-auto
+							button.btn.btn-sm.btn-success.px-3() +
+						h5#exampleModalBonusLabel.modal-title.col.pt-2 Начислить бонусы клиенту
+					button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				.modal-body
+					p Начислить:
+					+input("Введите сумму")(value='dfasdfsd')
+					+in-c()(checked)
+						span Уведомить клиента о начислении
+				.modal-footer
+					button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
+					button.btn.btn-primary(type='button') Создать категорию
+	#exampleModalBonusMinus.modal.fade( )
+		form.modal-dialog
+			.modal-content
+				.modal-header
+					.row 
+						.col-auto
+							button.btn.btn-sm.btn-danger.px-3() -
+						h5#exampleModalBonusMinusLabel.modal-title.col.pt-2 Списать бонусы у клиента
+					button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				.modal-body
+					p Списать: 
+					+input("Введите сумму")(value='dfasdfsd')
+					+in-c()(checked)
+						span Уведомить клиента о списании
+				.modal-footer
+					button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
+					button.btn.btn-primary(type='button') Создать категорию
+	#exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+		.modal-dialog
+			.modal-content
+				.modal-header
+					h5#exampleModalLabel.modal-title Создать новую категорию
+					button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				.modal-body
+					p Название:
+					+input("Введите название")
+				.modal-footer
+					button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
+					button.btn.btn-primary(type='button') Создать категорию
+	#exampleModaldel.modal.fade(tabindex='-1' aria-labelledby='exampleModaldelLabel' aria-hidden='true')
+		.modal-dialog
+			.modal-content
+				.modal-header
+					h5#exampleModaldelLabel.modal-title Вы уверены, что хотите удалить товар (или категорию)?
+					button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+				.modal-footer
+					button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Да
+					button.btn.btn-primary(type='button') Нет
 
 	#modalThanks.modal.fade(tabindex='-1' aria-labelledby='modalThanksLabel' aria-hidden='true')
 		.modal-dialog
@@ -12,6 +67,9 @@ mixin modal()
 					br
 					img.mb-2(src="img/check.svg", alt="")
 					.h4 Успешно! 
+					br
+					br
+					br
 
 	#modalM.modal.fade(tabindex='-1' aria-labelledby='modalMLabel' aria-hidden='true')
 		.modal-dialog
@@ -23,4 +81,7 @@ mixin modal()
 					br
 					img.mb-2(src="img/block_black.svg", alt="")
 					.h4 Ошибка!
+					br
+					br
+					br
 	// end modals

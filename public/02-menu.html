@@ -41,8 +41,8 @@
 						<div class="collapse navbar-collapse" id="navbarNav2">
 							<form class="row">
 								<div class="col-auto">
-									<button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-menu" aria-controls="offcanvasExample-add-menu">Разделы меню</button>
-									<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-menu" tabindex="-1" aria-labelledby="offcanvasExample-add-menu-Label">
+									<button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-scroll="true" data-bs-target="#offcanvasExample-add-menu" aria-controls="offcanvasExample-add-menu">Разделы меню</button>
+									<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-menu" data-bs-scroll="true" tabindex="-1" aria-labelledby="offcanvasExample-add-menu-Label">
 										<div class="offcanvas-header">
 											<h4 class="offcanvas-title" id="offcanvasExample-add-menu-Label">Категории меню</h4>
 											<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -189,43 +189,9 @@
 										</div>
 									</div>
 								</div>
-								<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Создать новую категорию</h5>
-												<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-											</div>
-											<div class="modal-body">
-												<p>Название:</p>
-												<div class="input-wrap form-group"><input class="input form-control" name="text" type="text" placeholder="Введите название"/>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="modal-footer">
-												<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Отменить</button>
-												<button class="btn btn-primary" type="button">Создать категорию</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="modal fade" id="exampleModaldel" tabindex="-1" aria-labelledby="exampleModaldelLabel" aria-hidden="true">
-									<div class="modal-dialog">
-										<div class="modal-content">
-											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModaldelLabel">Вы уверены, что хотите удалить товар (или категорию)?</h5>
-												<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-											</div>
-											<div class="modal-footer">
-												<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Да</button>
-												<button class="btn btn-primary" type="button">Нет</button>
-											</div>
-										</div>
-									</div>
-								</div>
 								<div class="col-auto">
-									<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product" aria-controls="offcanvasExample-add-product">Добавить товар</button>
-									<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product" tabindex="-1" aria-labelledby="offcanvasExample-add-product-Label">
+									<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-scroll="true" data-bs-target="#offcanvasExample-add-product" aria-controls="offcanvasExample-add-product">Добавить товар</button>
+									<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product" data-bs-scroll="true" tabindex="-1" aria-labelledby="offcanvasExample-add-product-Label">
 										<div class="offcanvas-header">
 											<h4 class="offcanvas-title" id="offcanvasExample-add-product-Label">Добавление/редактирование товара</h4>
 											<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -256,13 +222,11 @@
 											<!-- +e.input-wrap-->
 											<p>Описание товара:</p>
 											<div class="input-wrap">
-												<textara class="form-control">
-													Состав:
-													рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
-													Вес: 270 гр.
-												</textara>
+												<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
 											</div>
-											<button class="btn btn-primary" type="button">Добавить категорию</button>
+											<button class="btn btn-primary" type="button">Сохранить товар</button>
 										</div>
 									</div>
 								</div>
@@ -314,12 +278,12 @@
 							</thead>
 							<tbody>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-0" aria-controls="offcanvasExample-add-product-0"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-0" aria-controls="offcanvasExample-add-product-0">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-0" aria-controls="offcanvasExample-add-product-0">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-0" aria-controls="offcanvasExample-add-product-0">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -330,12 +294,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-1" aria-controls="offcanvasExample-add-product-1"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-1" aria-controls="offcanvasExample-add-product-1">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-1" aria-controls="offcanvasExample-add-product-1">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-1" aria-controls="offcanvasExample-add-product-1">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -346,12 +310,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-2" aria-controls="offcanvasExample-add-product-2"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-2" aria-controls="offcanvasExample-add-product-2">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-2" aria-controls="offcanvasExample-add-product-2">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-2" aria-controls="offcanvasExample-add-product-2">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -362,12 +326,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-3" aria-controls="offcanvasExample-add-product-3"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-3" aria-controls="offcanvasExample-add-product-3">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-3" aria-controls="offcanvasExample-add-product-3">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-3" aria-controls="offcanvasExample-add-product-3">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -378,12 +342,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-4" aria-controls="offcanvasExample-add-product-4"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-4" aria-controls="offcanvasExample-add-product-4">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-4" aria-controls="offcanvasExample-add-product-4">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-4" aria-controls="offcanvasExample-add-product-4">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -394,12 +358,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-5" aria-controls="offcanvasExample-add-product-5"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-5" aria-controls="offcanvasExample-add-product-5">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-5" aria-controls="offcanvasExample-add-product-5">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-5" aria-controls="offcanvasExample-add-product-5">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -410,12 +374,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-6" aria-controls="offcanvasExample-add-product-6"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-6" aria-controls="offcanvasExample-add-product-6">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-6" aria-controls="offcanvasExample-add-product-6">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-6" aria-controls="offcanvasExample-add-product-6">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -426,12 +390,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-7" aria-controls="offcanvasExample-add-product-7"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-7" aria-controls="offcanvasExample-add-product-7">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-7" aria-controls="offcanvasExample-add-product-7">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-7" aria-controls="offcanvasExample-add-product-7">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -442,12 +406,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-8" aria-controls="offcanvasExample-add-product-8"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-8" aria-controls="offcanvasExample-add-product-8">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-8" aria-controls="offcanvasExample-add-product-8">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-8" aria-controls="offcanvasExample-add-product-8">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -458,12 +422,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-9" aria-controls="offcanvasExample-add-product-9"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-9" aria-controls="offcanvasExample-add-product-9">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-9" aria-controls="offcanvasExample-add-product-9">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-9" aria-controls="offcanvasExample-add-product-9">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -474,12 +438,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-10" aria-controls="offcanvasExample-add-product-10"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-10" aria-controls="offcanvasExample-add-product-10">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-10" aria-controls="offcanvasExample-add-product-10">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-10" aria-controls="offcanvasExample-add-product-10">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -490,12 +454,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-11" aria-controls="offcanvasExample-add-product-11"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-11" aria-controls="offcanvasExample-add-product-11">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-11" aria-controls="offcanvasExample-add-product-11">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-11" aria-controls="offcanvasExample-add-product-11">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -506,12 +470,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-12" aria-controls="offcanvasExample-add-product-12"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-12" aria-controls="offcanvasExample-add-product-12">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-12" aria-controls="offcanvasExample-add-product-12">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-12" aria-controls="offcanvasExample-add-product-12">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -522,12 +486,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-13" aria-controls="offcanvasExample-add-product-13"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-13" aria-controls="offcanvasExample-add-product-13">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-13" aria-controls="offcanvasExample-add-product-13">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-13" aria-controls="offcanvasExample-add-product-13">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -538,12 +502,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-14" aria-controls="offcanvasExample-add-product-14"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-14" aria-controls="offcanvasExample-add-product-14">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-14" aria-controls="offcanvasExample-add-product-14">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-14" aria-controls="offcanvasExample-add-product-14">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -554,12 +518,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-15" aria-controls="offcanvasExample-add-product-15"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-15" aria-controls="offcanvasExample-add-product-15">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-15" aria-controls="offcanvasExample-add-product-15">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-15" aria-controls="offcanvasExample-add-product-15">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -570,12 +534,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-16" aria-controls="offcanvasExample-add-product-16"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-16" aria-controls="offcanvasExample-add-product-16">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-16" aria-controls="offcanvasExample-add-product-16">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-16" aria-controls="offcanvasExample-add-product-16">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -586,12 +550,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-17" aria-controls="offcanvasExample-add-product-17"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-17" aria-controls="offcanvasExample-add-product-17">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-17" aria-controls="offcanvasExample-add-product-17">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-17" aria-controls="offcanvasExample-add-product-17">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -602,12 +566,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-18" aria-controls="offcanvasExample-add-product-18"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-18" aria-controls="offcanvasExample-add-product-18">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-18" aria-controls="offcanvasExample-add-product-18">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-18" aria-controls="offcanvasExample-add-product-18">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -618,12 +582,12 @@
 																	</td>
 																</tr>
 																<tr>
-																	<td class="text-center"> 
+																	<td class="text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-19" aria-controls="offcanvasExample-add-product-19"> 
 																		<div class="mx-auto ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 57px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
 																	</td>
-																	<td>Ролл жаренный с лососем</td>
-																	<td>3242</td>
-																	<td>132 р.</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-19" aria-controls="offcanvasExample-add-product-19">Ролл жаренный с лососем</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-19" aria-controls="offcanvasExample-add-product-19">3242</td>
+																	<td data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample-add-product-19" aria-controls="offcanvasExample-add-product-19">132 р.</td>
 																	<td>
 																		<div class="form-check form-switch">
 																			<input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked="">
@@ -638,14 +602,862 @@
 					</div>
 				</div>
 			</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-0" tabindex="-1" aria-labelledby="offcanvasExample-add-product-0-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-0-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-1" tabindex="-1" aria-labelledby="offcanvasExample-add-product-1-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-1-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-2" tabindex="-1" aria-labelledby="offcanvasExample-add-product-2-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-2-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-3" tabindex="-1" aria-labelledby="offcanvasExample-add-product-3-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-3-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-4" tabindex="-1" aria-labelledby="offcanvasExample-add-product-4-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-4-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-5" tabindex="-1" aria-labelledby="offcanvasExample-add-product-5-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-5-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-6" tabindex="-1" aria-labelledby="offcanvasExample-add-product-6-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-6-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-7" tabindex="-1" aria-labelledby="offcanvasExample-add-product-7-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-7-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-8" tabindex="-1" aria-labelledby="offcanvasExample-add-product-8-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-8-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-9" tabindex="-1" aria-labelledby="offcanvasExample-add-product-9-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-9-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-10" tabindex="-1" aria-labelledby="offcanvasExample-add-product-10-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-10-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-11" tabindex="-1" aria-labelledby="offcanvasExample-add-product-11-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-11-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-12" tabindex="-1" aria-labelledby="offcanvasExample-add-product-12-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-12-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-13" tabindex="-1" aria-labelledby="offcanvasExample-add-product-13-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-13-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-14" tabindex="-1" aria-labelledby="offcanvasExample-add-product-14-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-14-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-15" tabindex="-1" aria-labelledby="offcanvasExample-add-product-15-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-15-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-16" tabindex="-1" aria-labelledby="offcanvasExample-add-product-16-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-16-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-17" tabindex="-1" aria-labelledby="offcanvasExample-add-product-17-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-17-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-18" tabindex="-1" aria-labelledby="offcanvasExample-add-product-18-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-18-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
+						<div class="offcanvas offcanvas-start text-start" id="offcanvasExample-add-product-19" tabindex="-1" aria-labelledby="offcanvasExample-add-product-19-Label">
+							<div class="offcanvas-header">
+								<h4 class="offcanvas-title" id="offcanvasExample-add-product-19-Label">Добавление/редактирование товара</h4>
+								<button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+							</div>
+							<div class="offcanvas-body">
+								<p>Название товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="row mb-3 gx-1 align-item-center">
+									<div class="col">Фото товара:</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/edit.svg" alt=""></button>
+									</div>
+									<div class="col-auto">
+										<button class="btn px-1"><img src="img/delete.svg" alt=""></button>
+									</div>
+									<div class="col-auto"></div>
+								</div>
+								<div class="mb-3 ratio bg-wrap" style="--bs-aspect-ratio: 66%; width: 300px"><img class="img-bg" src="img/prod.jpeg" alt=""></div>
+								<p>Артикул товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Цена товара:</p>
+								<div class="input-wrap form-group"><input class="input form-control" name="text" type="text"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<p>Описание товара:</p>
+								<div class="input-wrap">
+									<textarea class="form-control">Состав:
+рис, нори, лосоль, огурец свежий, сыр сливочный, кляр, сухари.
+Вес: 270 гр.</textarea>
+								</div>
+								<button class="btn btn-primary" type="button">Сохранить товар</button>
+							</div>
+						</div>
 		</div>
 		<!--  start modals-->
+		<div class="modal fade" id="exampleModalBonus">
+			<form class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="row"> 
+							<div class="col-auto">
+								<button class="btn btn-sm btn-success px-3">+</button>
+							</div>
+							<h5 class="modal-title col pt-2" id="exampleModalBonusLabel">Начислить бонусы клиенту</h5>
+						</div>
+						<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Начислить:</p>
+						<div class="input-wrap form-group"><input class="input form-control" name="text" type="text" placeholder="Введите сумму"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span>Уведомить клиента о начислении</span>
+						</label>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Отменить</button>
+						<button class="btn btn-primary" type="button">Создать категорию</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal fade" id="exampleModalBonusMinus">
+			<form class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="row"> 
+							<div class="col-auto">
+								<button class="btn btn-sm btn-danger px-3">-</button>
+							</div>
+							<h5 class="modal-title col pt-2" id="exampleModalBonusMinusLabel">Списать бонусы у клиента</h5>
+						</div>
+						<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Списать: </p>
+						<div class="input-wrap form-group"><input class="input form-control" name="text" type="text" placeholder="Введите сумму"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span>Уведомить клиента о списании</span>
+						</label>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Отменить</button>
+						<button class="btn btn-primary" type="button">Создать категорию</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Создать новую категорию</h5>
+						<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Название:</p>
+						<div class="input-wrap form-group"><input class="input form-control" name="text" type="text" placeholder="Введите название"/>
+						</div>
+						<!-- +e.input-wrap-->
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Отменить</button>
+						<button class="btn btn-primary" type="button">Создать категорию</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="exampleModaldel" tabindex="-1" aria-labelledby="exampleModaldelLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModaldelLabel">Вы уверены, что хотите удалить товар (или категорию)?</h5>
+						<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Да</button>
+						<button class="btn btn-primary" type="button">Нет</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="modal fade" id="modalThanks" tabindex="-1" aria-labelledby="modalThanksLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content"> 
 					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
 					<div class="modal-body text-center"><br/><br/><br/><img class="mb-2" src="img/check.svg" alt=""/>
-						<div class="h4">Успешно! </div>
+						<div class="h4">Успешно! </div><br/><br/><br/>
 					</div>
 				</div>
 			</div>
@@ -655,7 +1467,7 @@
 				<div class="modal-content">
 					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
 					<div class="modal-body text-center"><br/><br/><br/><img class="mb-2" src="img/block_black.svg" alt=""/>
-						<div class="h4">Ошибка!</div>
+						<div class="h4">Ошибка!</div><br/><br/><br/>
 					</div>
 				</div>
 			</div>
@@ -663,6 +1475,7 @@
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>

@@ -22,6 +22,7 @@ html {
 
 
 body {
+	min-height: 100vh;
 	&.fixed,
 	&.fancybox-active{
 		.header{ 
@@ -642,10 +643,18 @@ th{
 
 
 .modal-content{
-	min-height: 300px;
+	// min-height: 300px;
 	.btn-close{
 		position: absolute;
 		right: 20px;
 		top: 20px;
 	}
+}
+
+.select-custom{
+	@extend .invisible;
+}
+
+.modal-header{
+	padding-right: rem(30);
 }
