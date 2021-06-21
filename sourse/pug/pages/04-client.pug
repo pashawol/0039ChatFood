@@ -156,37 +156,3 @@ block pagecontent
 					button.btn.px-1(type="button")
 						img(src="img/send.svg", alt="")
 
-	#exampleModalBonus.modal.fade(tabindex='-1' aria-labelledby='exampleModalBonusLabel'   data-bs-scroll="true" aria-hidden='true')
-		.modal-dialog
-			.modal-content
-				.modal-header
-					.row 
-						.col-auto
-							button.btn.btn-sm.btn-success.px-3() +
-						h5#exampleModalBonusLabel.modal-title.col.pt-2 Начислить бонусы клиенту
-					button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-				.modal-body
-					p Начислить:
-					+input("Введите сумму")
-					+in-c()(checked)
-						span Уведомить клиента о начислении
-				.modal-footer
-					button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
-					button.btn.btn-primary(type='button') Создать категорию
-	#exampleModalBonusMinus.modal.fade( )
-		.modal-dialog
-			.modal-content
-				.modal-header
-					.row 
-						.col-auto
-							button.btn.btn-sm.btn-danger.px-3() -
-						h5#exampleModalBonusMinusLabel.modal-title.col.pt-2 Списать бонусы у клиента
-					button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-				.modal-body
-					p Списать: 
-					+input("Введите сумму")
-					+in-c()(checked)
-						span Уведомить клиента о списании
-				.modal-footer
-					button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Отменить
-					button.btn.btn-primary(type='button') Создать категорию
