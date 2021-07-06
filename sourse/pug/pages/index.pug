@@ -68,7 +68,7 @@ block pagecontent
 									.select-wrap.select-wrap--with-color
 										select.form-select.select-custom.select-custom--with-color
 											mixin a(a, c)
-												option(href='#'  value= a)= a
+												option()= a
 											+a('Новый')
 											+a('Принят')
 											+a('В пути')
@@ -123,13 +123,13 @@ block pagecontent
 							span Статус:  
 							.select-wrap.select-wrap--with-color
 								select.form-select.select-custom.select-custom--with-color
-									mixin a(a, c)
-										option(href='#'  value= a)= a
-									+a('Новый')
-									+a('Принят')
-									+a('В пути')
-									+a('Доставлен')
-									+a('Архив')
+									mixin b(a, c)
+										option()= a
+									+b('Новый')
+									+b('Принят')
+									+b('В пути')
+									+b('Доставлен')
+									+b('Архив')
 					tr 
 						td()
 							| Клиент: 
