@@ -21,8 +21,8 @@ function eventHandler() {
 
 		th.find('.select-custom').select2({
 			dropdownParent: th,
-			minimumResultsForSearch: -1,
-			disabled: true
+			minimumResultsForSearch: -1 // disabled: true
+
 		});
 	});
 }
