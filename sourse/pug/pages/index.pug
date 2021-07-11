@@ -66,14 +66,14 @@ block pagecontent
 
 								td
 									.select-wrap.select-wrap--with-color
-										select.form-select.select-custom.select-custom--with-color
+										select.form-select.select-custom.select-custom--with-color.js-example-disabled-results
 											mixin a(a, c)
-												option()= a
-											+a('Новый')
-											+a('Принят')
-											+a('В пути')
-											+a('Доставлен')
-											+a('Архив')
+												option( value=c)= a
+											+a('Новый',1)
+											+a('Принят',2)
+											+a('В пути',3 )
+											+a('Доставлен', 4)
+											+a('Архив', 5)
 										
 								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t3
 								td(data-bs-toggle="offcanvas" data-bs-target=`#offcanvasExample-${data.x}` aria-controls=`offcanvasExample-${data.x}`)= data.t4

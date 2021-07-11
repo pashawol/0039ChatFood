@@ -15,13 +15,14 @@ const $ = jQuery;
 
 function eventHandler() {
 	$('.select-wrap').each(function () {
-		let th = $(this);
-		th.find('.select-custom option').each(function () {
-			$(this).val($(this).html());
-		});
+		let th = $(this); // th.find('.select-custom option').each(function(){
+		// 	$(this).val($(this).html())
+		// })
+
 		th.find('.select-custom').select2({
 			dropdownParent: th,
-			minimumResultsForSearch: -1
+			minimumResultsForSearch: -1,
+			disabled: true
 		});
 	});
 }
